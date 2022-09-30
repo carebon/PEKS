@@ -34,6 +34,9 @@ http://crypto.stanford.edu/pbc/download.html
     ```
     in Default Installation path  /usr/local/lib
   Makefile uses this path. In case of change in destination directory, update the Makefile accordingly.
+  
+  ![Uploading image.png…]()
+  Display on PBC installation ready
 
 #### Build
 
