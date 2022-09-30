@@ -14,12 +14,25 @@ Public Key Encryption with Keyword Search. It is a simple, command-line applicat
 
   ```$ sudo apt-get install libssl-dev```
 * [PBC Library](https://crypto.stanford.edu/pbc)
+http://crypto.stanford.edu/pbc/download.html
+![image](https://user-images.githubusercontent.com/40285558/193268795-831ebc8a-05d9-4b1f-89d3-16a76df14fc5.png)
+ ```
+
+  sudo apt install m4 %注意小写m，装不上，先sudo apt update一下
+  sudo apt install flex
+  sudo apt install bison %几个依赖包
+  ```
 
   ```
   $ ./configure --prefix=$HOME/.local
   $ make
   $ make install
   ```
+  if ./configure --prefix=$HOME/.local is not work, we can modefiy C file head, such as 
+    ```
+  #include "/usr/local/include/pbc/pbc.h"
+    ```
+    in Default Installation path  /usr/local/lib
   Makefile uses this path. In case of change in destination directory, update the Makefile accordingly.
 
 #### Build
@@ -57,3 +70,5 @@ that doesn’t have the private key necessary to  decrypt the entire message
 to still be able to search for a certain set of keywords. For a keyword, a 
 PEKS value can be generated which will allow the server to perform a search
 using a trapdoor.
+
+This was modified in 2022.9.30 by Ben
