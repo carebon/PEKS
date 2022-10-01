@@ -41,6 +41,7 @@ http://crypto.stanford.edu/pbc/download.html
 #### Build
 
    ```$ make```
+   if make is not work, second way is “gcc main.c peks.c -o peks -lpbc -lssl -lcrypto -lgmp -lm”
 
 #### Run
 
